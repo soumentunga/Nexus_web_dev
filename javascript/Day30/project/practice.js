@@ -21,7 +21,7 @@ document.querySelector('button').addEventListener('click',()=>{
         other_info.innerHTML=`Weather condition is ${data.current.condition.text} and humidity is ${data.current.humidity} and AQi is ${AQI(data)}`
     }
     
-    const prom = fetch(`http://api.weatherapi.com/v1/current.json?key=c2f9306afd9e45d99ba140148250903&q=${place}&aqi=yes`);
+    const prom = fetch(`https://api.weatherapi.com/v1/current.json?key=c2f9306afd9e45d99ba140148250903&q=${place}&aqi=yes`);
     prom
     .then((response)=>response.json())
     .then((data)=>updateTemp(data))
