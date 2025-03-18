@@ -65,13 +65,41 @@ function deliverOrder(droplocation){
 
 //await will work only inside the async function without async function the await does not exits.
 
-async function Zomato() {
+// async function Zomato() {
 
-    const order = await placeOrder(cart)
-    const foodDetails =await preparingOrder(order)
-    const droplocation =await  pickupOrder(foodDetails)
-    deliverOrder(droplocation) 
+//     const order = await placeOrder(cart)
+//     const foodDetails =await preparingOrder(order)
+//     const droplocation =await  pickupOrder(foodDetails)
+//     deliverOrder(droplocation) 
+// }
+
+
+// Zomato();
+
+
+//--------Comparision before and After async and await introduced --------- //
+
+
+//before async await =>
+
+const p1 = new Promise((resolve,reject)=>{
+
+    setTimeout(()=>{
+        resolve("The Task is Resolve")
+    },3000)
+})
+
+//p1.then((response)=>console.log(response))
+
+//---------------------------------------------------------------------------
+
+//after async and await 
+
+async function greet() {
+
+    data = await p1;
+    console.log(data)
+    
 }
 
-
-Zomato();
+greet();
