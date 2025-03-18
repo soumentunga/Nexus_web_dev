@@ -45,10 +45,19 @@ function deliverOrder(droplocation){
 // deliverOrder(droplocation)
 
 
-placeOrder(cart , (order)=>{
-    preparingOrder(order , (foodDetails)=>{
-        pickupOrder(foodDetails, (droplocation)=>{
-            deliverOrder(droplocation);
-        });
-    })
-});
+// placeOrder(cart , (order)=>{
+//     preparingOrder(order , (foodDetails)=>{
+//         pickupOrder(foodDetails, (droplocation)=>{
+//             deliverOrder(droplocation);
+//         });
+//     })
+// });
+
+
+////Same Things Solve using Promise (Solution of callback hell problem)
+
+placeOrder(cart)
+.then(order=>preparingOrder(order))
+.then(foodDetails=>pickupOrder(foodDetails))
+.then(droplocation=>deliverOrder(droplocation))
+
