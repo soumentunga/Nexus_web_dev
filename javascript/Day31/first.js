@@ -82,24 +82,54 @@ function deliverOrder(droplocation){
 
 //before async await =>
 
+// const p1 = new Promise((resolve,reject)=>{
+
+//     setTimeout(()=>{
+//         resolve("The Task is Resolve")
+//     },3000)
+// })
+
+// //p1.then((response)=>console.log(response))
+
+// //---------------------------------------------------------------------------
+
+// //after async and await 
+
+// async function greet() {
+
+//     const data1= await p1;
+//     console.log(data1)
+//     const data2= await p1;
+//     console.log(data2)
+// }
+// //after print data1 the data2 print without taking time is because the promise is already resolved so it's print directely it's the original concept all other concept avliable on internet is baseless (example:parallel  executing type of concept avliable on internet)
+
+//  greet();
+
+
+
+//in this below example both are different promise here the parallel executig type of concept works when print of p1 done then p2 data also ready so p2 also print after p1. here parallel works because of there own parallely execution not because of "await"
+
 const p1 = new Promise((resolve,reject)=>{
 
     setTimeout(()=>{
-        resolve("The Task is Resolve")
+        resolve("First Promise Resolved ")
     },3000)
 })
 
-//p1.then((response)=>console.log(response))
+const p2= new Promise((resolve,reject)=>{
 
-//---------------------------------------------------------------------------
-
-//after async and await 
+    setTimeout(()=>{
+        resolve("Second Promise Resolved")
+    },3000)
+})
 
 async function greet() {
 
-    data = await p1;
-    console.log(data)
-    
-}
+        const data1= await p1;
+        console.log(data1)
+        const data2= await p2;
+        console.log(data2)
+    }
 
 greet();
