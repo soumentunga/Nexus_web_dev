@@ -1310,7 +1310,7 @@ const restaurants=[
 
   function getrestaurant(restaurants){
 
-    const root=document.getElementById('root');
+    const root = document.getElementById('root');
 
     restaurants.forEach(restaurant => {
       
@@ -1320,19 +1320,83 @@ const restaurants=[
 
     //image Creation 
     const image=document.createElement('img');
-    image.src=`Images/${restaurant.image}.jepg`
+    image.src=`Images/${restaurant.image}.jpeg`
 
-    //create card Content Div 
+    //create card Content 
     const Card_content = document.createElement('div');
-    Card_content.classList.add('card-content')
+    Card_content.classList.add('card-content');
+
+    //create Card_header
+
+    const Card_header = document.createElement('div');
+    Card_header.classList.add('card-header');
+
+    //name & rating inside the Card_header
+    const h3 =document.createElement('h3');
+    h3.textContent=restaurant.name;
+
+    const rate = document.createElement('span');
+    rate.textContent="Rating :"+restaurant.rating;
+
+    rate.classList.add('rating');
+
+    //SHift Restaurant Name and Rating inside the card-header
+      
+    Card_header.appendChild(h3);
+    Card_header.appendChild(rate);
+
+
+    //Create card footer
+      const Card_footer =document.createElement('div');
+      Card_footer.classList.add('card-footer');
     
-    
+    //create food type and Price for Two
+
+    const food = document.createElement('span');
+    food.textContent = restaurant.food_type;
+
+    const price = document.createElement('span');
+    price.textContent = "₹"+restaurant.Price_for_two +"for Two";
+
+    //make food and price inside the Card Footer
+    Card_footer.appendChild(food);
+    Card_footer.appendChild(price);
+
+
+   //Create of Card Location 
+   
+   const card_location= document.createElement('div')
+   card_location.classList.add('card-location')
+
+   //create location and distance from customer 
+
+   const location = document.createElement('span')
+   location.textContent=restaurant.location
+
+   const distance = document.createElement('span')
+   distance.textContent= restaurant.Distance_from_Customer_house + "km"
+  
+  //move location and distance inside the Card_location 
+
+  card_location.appendChild(location)
+  card_location.appendChild(distance)
+
+  //move card header,card footer ,card location inside the card content
+
+  Card_content.append(Card_header,Card_footer,card_location)
+
+  //Move card image and card content inside the card Div
+
+  card.append(image,Card_content)
+
+  //move card inside the root element 
+
+  root.appendChild(card)
+
 
     });
 
    
-    
-
-
-
   }
+
+  getrestaurant(restaurants);
