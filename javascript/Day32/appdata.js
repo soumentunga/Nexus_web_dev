@@ -1300,3 +1300,39 @@ const restaurants=[
       "Restaurant_close_time": 4
     }
   ]
+  // Create a card
+        // 1: Image
+        // 2: Card_content
+    //        i: Card_header (Name and rating)
+    //        ii: Card_footer (Food_type and price)
+    //        iii: card_location (Restaurant location, distance)
+
+
+  function getrestaurant(restaurants){
+
+    const root=document.getElementById('root');
+
+    restaurants.forEach(restaurant => {
+      
+      //card creation 
+    const card = document.createElement('div');
+    card.classList.add('card')
+
+    //image Creation 
+    const image=document.createElement('img');
+    image.src=`Images/${restaurant.image}.jepg`
+
+    //create card Content Div 
+    const Card_content = document.createElement('div');
+    Card_content.classList.add('card-content')
+    
+    
+
+    });
+
+   
+    
+
+
+
+  }
