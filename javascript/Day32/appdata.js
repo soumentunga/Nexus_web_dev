@@ -1400,5 +1400,14 @@ const restaurants=[
   }
 
   getrestaurant(restaurants);
+  
+  document.getElementById("Alcohol").addEventListener('click',()=>{
+    
+    const result = restaurants.filter((obj)=>obj.alcohol);
+    document.getElementById('root').replaceChildren();
+    getrestaurant(result);
+
+})
+
 
   
