@@ -27,3 +27,19 @@ let abc:null= null;
 //undefined type 
 
 let bcd:undefined = undefined;
+
+//use of typescript watch(tsc --watch) which automatically change ts -> js
+
+let names:string="Soumen Tunga"
+let age:number=20;
+
+
+//Homework for day 2:
+//Compile time language ,Interprted language,JIT:just in time 
+
+
+
+//Why it automaticallly gives error without mention the type
+// let x=20
+
+// x="Monan";

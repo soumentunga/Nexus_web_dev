@@ -17,3 +17,11 @@ let bignumber = 48728727282939n;
 let abc = null;
 //undefined type 
 let bcd = undefined;
+//use of typescript watch(tsc --watch) which automatically change ts -> js
+let names = "Soumen Tunga";
+let age = 20;
+//Homework for day 2:
+//Compile time language ,Interprted language,JIT:just in time 
+//Why it automaticallly gives error without mention the type
+// let x=20
+// x="Monan";
