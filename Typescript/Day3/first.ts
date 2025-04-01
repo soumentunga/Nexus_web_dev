@@ -110,7 +110,34 @@ function total(...arr:number[]){
 
 total(1,3,4,2,1,8);
 
+//extends keyword 
 
+interface human{
+    name:string,
+    age:number,
+}
 
+interface Teacher extends human{
+    salary:string,
+    id:number
+}
 
+interface BankEmployee extends human{
+    salary:string,
+    position:string
+}
 
+const obj6:Teacher={
+    salary: "Two Hundred",
+    id: 123,
+    name:"Soumen",
+    age:20
+}
+const obj7:BankEmployee={
+    name:"Rahul",
+    age:31,
+    salary:"Four hundred",
+    position:"manager"
+}
+
+//console.log(obj6,obj7)

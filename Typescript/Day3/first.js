@@ -62,3 +62,16 @@ function total(...arr) {
     console.log(ans);
 }
 total(1, 3, 4, 2, 1, 8);
+const obj6 = {
+    salary: "Two Hundred",
+    id: 123,
+    name: "Soumen",
+    age: 20
+};
+const obj7 = {
+    name: "Rahul",
+    age: 31,
+    salary: "Four hundred",
+    position: "manager"
+};
+//console.log(obj6,obj7)
