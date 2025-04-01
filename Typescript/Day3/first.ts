@@ -38,5 +38,79 @@ const obj3:Readonly<customer>={
 }
 //obj3.name="Rahul"//this is not allow
 
-//Array of Objects
+//<----------Array of Objects-------->
+
+interface people{name:string,age:number}
+
+const arr:people[]=[{name:"Soumen Tunga",age:21},{name:"Ranit Manik ",age:19}]
+
+//<--------Function in Typescript-------->
+
+function greet(a:number):number{
+    console.log(a);
+    return a+5
+}
+console.log(greet(10));
+
+
+function meet(msg:string,value:number):void{
+    console.log(msg,value);
+}
+
+meet("Soumen Tunga",10);
+
+//default Parameter
+
+function neet(msg:string="Ranit"){
+    console.log(msg);
+}
+neet();
+neet("Soham");
+
+//optional Parameter
+
+function GATE(name?:string){
+    console.log(name||"Default Name");
+}
+GATE("Soumen");
+GATE();
+
+//arrow function in Type Script
+
+const sum =(a:number,b:number):number=>{
+    return a+b;
+}
+console.log(sum(3,4));
+
+
+
+
+//call back function 
+type chill = (amount:number)=>void
+function placeOrder(order:number,callback:chill):void{
+    const amount:number = order+10;
+    callback(amount);
+
+}
+
+placeOrder(10,(amount)=>{
+    console.log(amount);
+})
+
+
+//Rest Parameter
+
+function total(...arr:number[]){
+    let ans:number=0;
+    arr.forEach((value:number)=>{
+        ans=ans+value;
+    });
+    console.log(ans);
+}
+
+total(1,3,4,2,1,8);
+
+
+
+
 
