@@ -48,3 +48,20 @@ const E1 = new Employee(200000, "Soumen Tunga", 23, 500000);
 //console.log(E1)
 console.log(E1.meet());
 console.log(E1.name);
+//console.log(E1.age) //(can't access because it is not private )
+console.log(E1.salary); //this is possible becsuse it is protected
+//generics  in Typescript (template)
+//Problem before generics
+// function value (a:(number|string)):number|string{
+//     return a;
+// }
+// console.log(value(10));
+// console.log(value("Soumen"))
+//after generics
+function value(a) {
+    return a;
+}
+console.log(value("Rintu"));
+console.log(value([12, 34, 13, 45, 21]));
+console.log(value(true));
+console.log(value(["Soumen", "Chiknu", "moltu", "Kaka", "Ranit"]));

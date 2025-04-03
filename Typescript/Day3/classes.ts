@@ -76,4 +76,47 @@ console.log(E1.salary);//this is possible becsuse it is protected
 
 
 
+//generics  in Typescript (template)
+
+//Problem before generics
+// function value (a:(number|string)):number|string{
+//     return a;
+// }
+
+// console.log(value(10));
+// console.log(value("Soumen"))
+
+//after generics
+
+function value<T>(a:T):T{
+    return a;
+}
+
+console.log(value<number>(20))
+console.log(value<string>("Rintu"))
+console.log(value([12,34,13,45,21]))
+console.log(value(true))
+console.log(value(["Soumen","Chiknu","moltu","Kaka","Ranit","Munsi","Topu"]))
+
+//
+
+interface admin<t,U>{
+    name:string,
+    age:number,
+    addhar:t,
+    salary:U
+}
+
+const obj10:admin<number,number>={
+    name:"Soumen",
+    age:20,
+    addhar:123456,
+    salary:70000
+}
+const obj11:admin<string,number>={
+    name:"Rintu",
+    age:21,
+    addhar:"hdfhfkfkds",
+    salary:80232
+}
 
