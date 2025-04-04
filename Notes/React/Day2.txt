@@ -1,0 +1,12 @@
+Bundler(Used for Code Optimization & make Production Ready Code ): Webpack ,Vite,parcel
+
+npm:node package manager
+npm -init
+npm install parcel
+
+
+version : 18.2.1
+[major.minor.patch
+^ [carrot] : minor & patches
+~[tilday]: only patches
+
