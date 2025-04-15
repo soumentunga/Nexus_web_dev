@@ -1,0 +1,28 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.watch{
+    margin-top: 30vh;
+    color: white;
+    background-color: rgb(24, 153, 192);
+    padding: 2vw;
+}
+
+button{
+    margin-right:0.4vw;
+    width: 5vw;
+    height: 5vh;
+    background-color: chartreuse;
+    font-size: 18px;
+    border-color: rgb(18, 31, 3);
+}
+
+h1{
+    margin-left: 5vw;
+}

@@ -1,4 +1,4 @@
-import React, { useState,useEffect, useCallback } from "react"
+import React, { useState,useEffect, useCallback, useMemo } from "react"
 import ReactDom from "react-dom/client"
 
 
@@ -7,14 +7,15 @@ function App(){
     const [count,setcount]=useState(0)
     const [number,setnumber]=useState("")
 
-    
-
-    function Fibonacci(n){
+    const Fibonacci = useCallback((n)=>{
         if(n<=1)return n
 
         return Fibonacci(n-1)+Fibonacci(n-2)
-    }
-    const result = Fibonacci(number)
+    },[])
+
+
+
+    const result = useMemo(()=>Fibonacci(number),[number])
 
     return(
         <>
@@ -26,7 +27,7 @@ function App(){
             <div>
 
                 <h2>Fibonacci Number :{result}</h2>
-                <input value={number} placeholder=" Enter The n-th term (Fn)
+                <input value={number} placeholder="Enter The n-th term (Fn)
 " onChange={(e)=>setnumber(e.target.value)}></input>
             </div>
 
