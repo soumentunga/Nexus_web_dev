@@ -3,6 +3,8 @@
 // const mul = require('./Calculator/mul')
 
 //Another method using Index 
+//Notes :its a special property of Node Js that if noting Mention Specifically which file of a Folder  it will by Default import from index file of That folder.
+
 const{add,sub,mul}=require('./Calculator')
 
 
