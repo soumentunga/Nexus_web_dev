@@ -1,9 +1,9 @@
-const sum = require ("./second")
+const {sum,sub} = require ("./second")
 
 
 console.log("hello i am First");
-sum(5,2)
-
+sum(5,2);
+sub(5,2);
 
 //CJS:common JS Module
 //IIFE format=>
