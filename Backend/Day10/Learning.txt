@@ -1,0 +1,8 @@
+1.Learn About what is DATABASE and What Is DATABASE MANAGEMENT SYSTEM and Differance bwtween Them
+2. Why in SQL we Don't Store Video 
+IN Banking Type application we use SQL database Because it follow ACID property 
+3.ACID property DBMS
+A=Atomicity
+C=consistency
+I=Isolation
+D=Durability
