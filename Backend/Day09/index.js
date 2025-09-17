@@ -90,6 +90,63 @@ app.patch("/admin",Auth,(req,res)=>{
 
 
 
+app.post("/user/:id",(req,res)=>{
+   const id = parseInt(req.params.id)
+   const foodItem=FoodMenu.find(item=>item.id===id)
+   if(foodItem){
+        AddToCart.push(foodItem)
+        res.status(200).send("Item Added Sucessfully")
+   }
+   else{
+        res.send("Item Out Of Stock");
+   }
+})
+
+app.delete("/user/:id",(req,res)=>{
+
+    try{
+        const id = parseInt(req.params.id)
+    const  index =AddToCart.findIndex(item=>item.id===id)
+    if(index!=-1){
+        AddToCart.splice(index,1)
+        res.send("Item Removed Sucessfullly")
+    }
+    else{
+        res.send("Item Not Present in Cart")
+    }
+    }
+    catch(err){
+        res.send("Some Error"+ err)
+    }
+    
+})
+
+app.get("/user",(req,res)=>{
+    if(AddToCart==0)
+        res.send("Cart is Empty")
+    else
+        res.send(AddToCart)
+})
+
+
+//error handeling 
+
+app.get("/dummy",(req,res)=>{
+        try{
+            // JSON.parse("Invalid json");
+            // JSON.parse('{"name":"Rohit"}');
+
+            throw new Error('BROKEN')
+            res.send("Hello Coder")
+        }
+        catch(err){
+            res.send("some error Occured"+err)
+        }
+})
+
+
+
+
 
 app.listen(3000,()=>{
     console.log("Server Listning at Port No 3000")
