@@ -1,0 +1,19 @@
+implementation of AVL tree
+B+ Tree
+only leaf node have the SSD address not the intermediate node
+why we Still not consider AVL tree And Use B+ tree in details
+concept of sector , track
+block Read:4kb
+i/o operation is slow that's why B+ tree
+B+ tree block size = memory size
+
+leaf node extra pointer use for range quary so Range quary is so fast
+insert,update,search,delete,range quary in B+ tree
+
+<------------------->
+B Tree
+ internal node ka pas vi SSD ka address hota hai
+ But in B tree range Quary not Possible so that's why we use B+ Tree
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In mongo DB we use Bson Format(Binary JSON)
+we fill binary data ,date in Mongo db
