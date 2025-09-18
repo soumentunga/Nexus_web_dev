@@ -1,0 +1,14 @@
+Today's Therory Learning=>
+
+SQL->Table
+Mongo DB-> Collection
+SQL=>row
+Mongo DB => document
+SQL=>column
+Mongo DB=>Field
+
+
+
+how indexing done in Mongo DB why tree why not  Array data Structure 
+
+What is Sharding?
