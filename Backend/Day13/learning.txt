@@ -8,7 +8,7 @@ SQL=>column
 Mongo DB=>Field
 
 
-
+how internally storage works in mongo DB 
 how indexing done in Mongo DB why tree why not  Array data Structure 
 
 What is Sharding?
